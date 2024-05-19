@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.crhistophergomez.controller.MenuCargoEmpleadoController">
+   <children>
+      <ImageView fitHeight="422.0" fitWidth="756.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FondoCargoEmpleado.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnRegresar" mnemonicParsing="false" onAction="#regresar" prefHeight="40.0" prefWidth="64.0" text="Regresar" />
+      <Text layoutX="31.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu de cargo de empleados" textAlignment="CENTER" wrappingWidth="177.0">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#58bf20" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <GridPane layoutX="92.0" layoutY="158.0" prefHeight="243.0" prefWidth="83.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="btnAgregar" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#agregar" prefHeight="61.0" prefWidth="128.0" text="Agregar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReportes" alignment="CENTER" mnemonicParsing="false" onAction="#reporte" prefHeight="61.0" prefWidth="126.0" text="Reportes" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" alignment="CENTER" mnemonicParsing="false" onAction="#editar" prefHeight="62.0" prefWidth="126.0" text="Editar" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" alignment="CENTER" mnemonicParsing="false" onAction="#eliminar" prefHeight="68.0" prefWidth="128.0" text="Eliminar" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <ImageView fx:id="imgAgregar" fitHeight="54.0" fitWidth="66.0" layoutX="31.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/AgregarPersona.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgEliminar" fitHeight="60.0" fitWidth="52.0" layoutX="32.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/EliminarPersona.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgEditar" fitHeight="63.0" fitWidth="54.0" layoutX="31.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/EditarPersona.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgReportes" fitHeight="57.0" fitWidth="53.0" layoutX="32.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Registros.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblCargoEmpleados" layoutX="236.0" layoutY="158.0" onMouseClicked="#seleccionarDatos" prefHeight="243.0" prefWidth="483.0">
+        <columns>
+          <TableColumn fx:id="colCodigoCE" prefWidth="83.0" text="codigoCargoEmpleado" />
+          <TableColumn fx:id="colNombreCE" prefWidth="130.0" text="nombreCargo" />
+            <TableColumn fx:id="colDescripcionCE" prefWidth="268.99993896484375" text="descripcionCargo" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="332.0" layoutY="40.0" prefHeight="90.0" prefWidth="281.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="102.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="179.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo Cargo" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Cargo" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion Cargo" GridPane.rowIndex="2" />
+            <TextField fx:id="txtCodigoCE" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombreCE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtDescripcionCE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
