@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import org.crhistophergomez.controller.MenuCargoEmpleadoController;
 import org.crhistophergomez.controller.MenuClientesController;
 import org.crhistophergomez.controller.MenuComprasController;
+import org.crhistophergomez.controller.MenuDetalleComprasController;
 import org.crhistophergomez.controller.MenuPrincipalController;
 import org.crhistophergomez.controller.MenuProveedoresController;
 import org.crhistophergomez.controller.MenuTipoProductoController;
@@ -115,6 +116,63 @@ public class Main extends Application {
         }
     }
 
+    public void menuDetalleCompras(){
+        try{
+            MenuDetalleComprasController menuDetalleComprasView = (MenuDetalleComprasController)cambiarEscena("MenuDetalleCompras", 713, 400);
+            menuDetalleComprasView.setEscenarioPrincipal(this);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void menuDetallesFacturas(){
+        try{
+            MenuDetallesFacturasController menuDetallesFacturas =
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void menuEmailProveedores(){
+        try{
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void menuEmpleado(){
+        try{
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void menuFactura(){
+        try{
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void menuProductos(){
+        try{
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void menuTelefonoProveedor(){
+        try{
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
     public static void main(String[] args) {
         launch(args);
     }
