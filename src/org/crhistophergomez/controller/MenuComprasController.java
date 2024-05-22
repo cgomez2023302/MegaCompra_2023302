@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -55,6 +56,8 @@ public class MenuComprasController implements Initializable{
     @FXML private ImageView imgEliminar;
     @FXML private ImageView imgEditar;
     @FXML private ImageView imgReportes;
+    
+    @FXML private MenuItem btnDetalleCompras;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -280,6 +283,13 @@ public class MenuComprasController implements Initializable{
     public void regresar(ActionEvent event){
         if(event.getSource() == btnRegresar){
             escenarioPrincipal.menuPrincipalView();
+        }
+    }
+    
+    @FXML 
+    public void clicDetalleCompras (ActionEvent event){
+        if(event.getSource() == btnDetalleCompras){
+            escenarioPrincipal.menuDetalleCompras();
         }
     }
 }

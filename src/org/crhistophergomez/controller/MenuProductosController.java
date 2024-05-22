@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import org.crhistophergomez.system.Main;
 
 
@@ -13,11 +14,34 @@ public class MenuProductosController implements Initializable{
     private Main escenarioPrincipal;
     
     @FXML private Button btnRegresar;
+    @FXML private Button btnAgregar;
+    @FXML private Button btnEliminar;
+    @FXML private Button btnEditar;
+    @FXML private Button btnReportes;
+    
+    @FXML private MenuItem btnTipoProducto;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
     }
+    
+    public void agregar(){
+        
+    }
+    
+    public void eliminar(){
+        
+    }
+    
+    public void editar(){
+        
+    }
+    
+    public void reportes(){
+        
+    }
+    
     public void setEscenarioPrincipal(Main escenarioPrincipal){
         this.escenarioPrincipal = escenarioPrincipal;
     }
@@ -26,6 +50,13 @@ public class MenuProductosController implements Initializable{
     public void regresar(ActionEvent event){
         if(event.getSource() == btnRegresar){
             escenarioPrincipal.menuPrincipalView();
+        }
+    }
+    
+    @FXML 
+    public void clicTipoProducto (ActionEvent event){
+        if(event.getSource() == btnTipoProducto){
+            escenarioPrincipal.menuTipoProductoView();
         }
     }
 }

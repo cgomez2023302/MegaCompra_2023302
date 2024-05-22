@@ -13,8 +13,14 @@ import org.crhistophergomez.controller.MenuCargoEmpleadoController;
 import org.crhistophergomez.controller.MenuClientesController;
 import org.crhistophergomez.controller.MenuComprasController;
 import org.crhistophergomez.controller.MenuDetalleComprasController;
+import org.crhistophergomez.controller.MenuDetallesFacturasController;
+import org.crhistophergomez.controller.MenuEmailProveedoresController;
+import org.crhistophergomez.controller.MenuEmpleadoController;
+import org.crhistophergomez.controller.MenuFacturaController;
 import org.crhistophergomez.controller.MenuPrincipalController;
+import org.crhistophergomez.controller.MenuProductosController;
 import org.crhistophergomez.controller.MenuProveedoresController;
+import org.crhistophergomez.controller.MenuTelefonoProveedorController;
 import org.crhistophergomez.controller.MenuTipoProductoController;
 import org.crhistophergomez.controller.ProgramadorController;
 
@@ -118,7 +124,7 @@ public class Main extends Application {
 
     public void menuDetalleCompras(){
         try{
-            MenuDetalleComprasController menuDetalleComprasView = (MenuDetalleComprasController)cambiarEscena("MenuDetalleCompras", 713, 400);
+            MenuDetalleComprasController menuDetalleComprasView = (MenuDetalleComprasController)cambiarEscena("MenuDetalleCompras.fxml", 713, 400);
             menuDetalleComprasView.setEscenarioPrincipal(this);
         }catch(Exception e){
             e.printStackTrace();
@@ -127,7 +133,8 @@ public class Main extends Application {
     
     public void menuDetallesFacturas(){
         try{
-            MenuDetallesFacturasController menuDetallesFacturas =
+            MenuDetallesFacturasController menuDetallesFacturasView =(MenuDetallesFacturasController)cambiarEscena("MenuDetallesFacturas.fxml", 713, 400);
+            menuDetallesFacturasView.setEscenarioPrincipal(this);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -135,7 +142,8 @@ public class Main extends Application {
     
     public void menuEmailProveedores(){
         try{
-            
+            MenuEmailProveedoresController menuEmailProveedoresController = (MenuEmailProveedoresController)cambiarEscena("MenuEmailProveedores.fxml", 713, 400);
+            menuEmailProveedoresController.setEscenarioPrincipal(this);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -143,7 +151,8 @@ public class Main extends Application {
     
     public void menuEmpleado(){
         try{
-            
+            MenuEmpleadoController menuEmpleadoView = (MenuEmpleadoController)cambiarEscena("MenuEmpleado.fxml", 713, 400);
+            menuEmpleadoView.setEscenarioPrincipal(this);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -151,7 +160,8 @@ public class Main extends Application {
     
     public void menuFactura(){
         try{
-            
+            MenuFacturaController menuFacturaView = (MenuFacturaController)cambiarEscena("MenuFactura.fxml", 713, 400);
+            menuFacturaView.setEscenarioPrincipal(this);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -159,7 +169,8 @@ public class Main extends Application {
     
     public void menuProductos(){
         try{
-            
+            MenuProductosController menuProductoView = (MenuProductosController)cambiarEscena("MenuProductos.fxml", 880, 500);
+            menuProductoView.setEscenarioPrincipal(this);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -167,7 +178,8 @@ public class Main extends Application {
     
     public void menuTelefonoProveedor(){
         try{
-            
+            MenuTelefonoProveedorController menuTelefonoProveedorView = (MenuTelefonoProveedorController)cambiarEscena("MenuTelefonoProveedor.fxml", 713, 400);
+            menuTelefonoProveedorView.setEscenarioPrincipal(this);
         }catch(Exception e){
             e.printStackTrace();
         }

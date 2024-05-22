@@ -8,19 +8,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.MenuItem;
 import org.crhistophergomez.system.Main;
 
-/**
- *
- * @author informatica
- */
+
 public class MenuPrincipalController implements Initializable{
     private Main escenarioPrincipal;
     
     @FXML MenuItem btnMenuClientes;
     @FXML MenuItem btnProgramador;
     @FXML MenuItem btnProveedor;
-    @FXML MenuItem btnCargoEmpleado;
-    @FXML MenuItem btnTipoProducto;
     @FXML MenuItem btnCompras;
+    @FXML MenuItem btnEmpleados;
+    @FXML MenuItem btnFacturas;
+    @FXML MenuItem btnProductos;
     
     
     @Override
@@ -58,23 +56,30 @@ public class MenuPrincipalController implements Initializable{
     }
     
     @FXML 
-    public void clicCargoEmpleado (ActionEvent event){
-        if(event.getSource() == btnCargoEmpleado){
-            escenarioPrincipal.menuCargoEmpleadoView();
-        }
-    }
-    
-    @FXML 
-    public void clicTipoProducto (ActionEvent event){
-        if(event.getSource() == btnTipoProducto){
-            escenarioPrincipal.menuTipoProductoView();
-        }
-    }
-    
-    @FXML 
     public void clicCompra (ActionEvent event){
         if(event.getSource() == btnCompras){
             escenarioPrincipal.menuCompraView();
+        }
+    }
+    
+    @FXML
+    public void clicEmpleado (ActionEvent event){
+        if(event.getSource() == btnEmpleados){
+            escenarioPrincipal.menuEmpleado();
+        }
+    }
+    
+    @FXML
+    public void clicFacturas (ActionEvent event){
+        if(event.getSource() == btnFacturas){
+            escenarioPrincipal.menuFactura();
+        }
+    }
+    
+    @FXML 
+    public void clicProductos (ActionEvent event){
+        if(event.getSource() == btnProductos){
+            escenarioPrincipal.menuProductos();
         }
     }
 }

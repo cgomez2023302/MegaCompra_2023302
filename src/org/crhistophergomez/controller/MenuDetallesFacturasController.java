@@ -13,11 +13,32 @@ public class MenuDetallesFacturasController implements Initializable{
     private Main escenarioPrincipal;
     
     @FXML private Button btnRegresar;
+    @FXML private Button btnAgregar;
+    @FXML private Button btnEliminar;
+    @FXML private Button btnEditar;
+    @FXML private Button btnReportes;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
     }
+    
+    public void agregar(){
+        
+    }
+    
+    public void eliminar(){
+        
+    }
+    
+    public void editar(){
+        
+    }
+    
+    public void reportes(){
+        
+    }
+    
     public void setEscenarioPrincipal(Main escenarioPrincipal){
         this.escenarioPrincipal = escenarioPrincipal;
     }

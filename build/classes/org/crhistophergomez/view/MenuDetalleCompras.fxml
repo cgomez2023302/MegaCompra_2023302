@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.crhistophergomez.controller.MenuDetalleComprasController">
    <children>
       <ImageView fitHeight="406.0" fitWidth="713.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -73,7 +73,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btnReportes" alignment="CENTER" mnemonicParsing="false" onAction="#reporte" prefHeight="61.0" prefWidth="126.0" text="Reportes" GridPane.rowIndex="3">
+            <Button fx:id="btnReportes" alignment="CENTER" mnemonicParsing="false" onAction="#reportes" prefHeight="61.0" prefWidth="126.0" text="Reportes" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

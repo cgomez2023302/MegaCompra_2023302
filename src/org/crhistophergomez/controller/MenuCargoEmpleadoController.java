@@ -266,7 +266,7 @@ public class MenuCargoEmpleadoController implements Initializable{
     @FXML
     public void regresar(ActionEvent event){
         if(event.getSource() == btnRegresar){
-            escenarioPrincipal.menuPrincipalView();
+            escenarioPrincipal.menuEmpleado();
         }
     }
 }
