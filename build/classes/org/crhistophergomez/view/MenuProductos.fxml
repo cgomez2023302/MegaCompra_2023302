@@ -110,13 +110,13 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField fx:id="txtNombreC" GridPane.columnIndex="2" />
-            <TextField fx:id="txtApellidoC" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <TextField fx:id="txtDireccionC" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <TextField fx:id="txtCorreoC" GridPane.columnIndex="4" />
-            <TextField fx:id="txtCodigoC" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <TextField fx:id="txtNIT" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <TextField fx:id="txtTelefonoC" GridPane.columnIndex="6" />
+            <TextField fx:id="txtCodigoProducto" GridPane.columnIndex="2" />
+            <TextField fx:id="txtDescripcion" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="txtPrecioU" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="txtPrecioD" GridPane.columnIndex="4" />
+            <TextField fx:id="txtPrecioM" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField fx:id="txtImagenProducto" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField fx:id="txtExistencia" GridPane.columnIndex="6" />
             <Label text="Codigo Producto" textFill="WHITE" GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -162,21 +162,21 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Text>
-            <ComboBox prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <ComboBox prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbCodigoTipoProducto" prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbCodigoProveedor" prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <TableView layoutX="196.0" layoutY="132.0" prefHeight="354.0" prefWidth="676.0">
+      <TableView fx:id="tblProductos" layoutX="196.0" layoutY="132.0" onMouseClicked="#selecionarElementos" prefHeight="354.0" prefWidth="676.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="codigoProducto" />
-          <TableColumn prefWidth="75.0" text="descripcion" />
-            <TableColumn prefWidth="75.0" text="precioUnitario" />
-            <TableColumn prefWidth="75.0" text="precioDocena" />
-            <TableColumn prefWidth="75.0" text="precioMayor" />
-            <TableColumn prefWidth="75.0" text="imagenProducto" />
-            <TableColumn prefWidth="75.0" text="existencia" />
-            <TableColumn prefWidth="75.0" text="codigoTipoProducto" />
-            <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn fx:id="colCodigoProducto" prefWidth="75.0" text="codigoProducto" />
+          <TableColumn fx:id="colDescripcion" prefWidth="75.0" text="descripcion" />
+            <TableColumn fx:id="colPrecioU" prefWidth="75.0" text="precioUnitario" />
+            <TableColumn fx:id="colPrecioD" prefWidth="75.0" text="precioDocena" />
+            <TableColumn fx:id="colPrecioM" prefWidth="75.0" text="precioMayor" />
+            <TableColumn fx:id="colImagenProducto" prefWidth="75.0" text="imagenProducto" />
+            <TableColumn fx:id="colExistencia" prefWidth="75.0" text="existencia" />
+            <TableColumn fx:id="colCodigoTipoProducto" prefWidth="75.0" text="codigoTipoProducto" />
+            <TableColumn fx:id="colCodigoProveedor" prefWidth="75.0" text="Codigo Proveedor" />
         </columns>
       </TableView>
       <MenuBar layoutX="89.0">
