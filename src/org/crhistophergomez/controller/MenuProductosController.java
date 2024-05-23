@@ -32,9 +32,9 @@ public class MenuProductosController implements Initializable{
     private enum operaciones {AGREGAR, ELIMINAR, EDITAR, ACTUALIZAR, CANCELAR, NINGUNO}
     private operaciones tipoDeOperaciones = operaciones.NINGUNO; 
     
-    private ObservableList<Productos> listaProductos;
-    private ObservableList<Proveedores> listaProveedores;
-    private ObservableList<TipoProducto> listaTipoProducto;
+    private ObservableList <Productos> listaProductos;
+    private ObservableList <Proveedores> listaProveedores;
+    private ObservableList <TipoProducto> listaTipoProducto;
     
     @FXML private Button btnRegresar;
     
@@ -81,16 +81,16 @@ public class MenuProductosController implements Initializable{
     }
     
     public void cargaDatos(){
-    tblProductos.setItems(getProducto());
-    colCodigoProducto.setCellValueFactory(new PropertyValueFactory<Productos, Integer>("codigoProducto"));
-    colDescripcion.setCellValueFactory(new PropertyValueFactory<Productos, String>("descripcion"));
-    colPrecioU.setCellValueFactory(new PropertyValueFactory<Productos, Double>("precioUnitario"));
-    colPrecioD.setCellValueFactory(new PropertyValueFactory<Productos, Double>("precioDocena"));
-    colPrecioM.setCellValueFactory(new PropertyValueFactory<Productos, Double>("precioMayor"));
-    colImagenProducto.setCellValueFactory(new PropertyValueFactory<Productos, String>("imagenProducto"));
-    colExistencia.setCellValueFactory(new PropertyValueFactory<Productos, Integer>("existencia"));
-    colCodigoTipoProducto.setCellValueFactory(new PropertyValueFactory<Productos, Integer>("codigoTipoProducto"));
-    colCodigoProveedor.setCellValueFactory(new PropertyValueFactory<Productos, Integer>("codigoProveedor"));
+        tblProductos.setItems(getProducto());
+        colCodigoProducto.setCellValueFactory(new PropertyValueFactory<Productos, Integer>("codigoProducto"));
+        colDescripcion.setCellValueFactory(new PropertyValueFactory<Productos, String>("descripcion"));
+        colPrecioU.setCellValueFactory(new PropertyValueFactory<Productos, Double>("precioUnitario"));
+        colPrecioD.setCellValueFactory(new PropertyValueFactory<Productos, Double>("precioDocena"));
+        colPrecioM.setCellValueFactory(new PropertyValueFactory<Productos, Double>("precioMayor"));
+        colImagenProducto.setCellValueFactory(new PropertyValueFactory<Productos, String>("imagenProducto"));
+        colExistencia.setCellValueFactory(new PropertyValueFactory<Productos, Integer>("existencia"));
+        colCodigoTipoProducto.setCellValueFactory(new PropertyValueFactory<Productos, Integer>("codigoTipoProducto"));
+        colCodigoProveedor.setCellValueFactory(new PropertyValueFactory<Productos, Integer>("codigoProveedor"));
     }
     
     public void selecionarElementos(){
@@ -105,11 +105,11 @@ public class MenuProductosController implements Initializable{
        cmbCodigoProveedor.getSelectionModel().select(buscarProveedores(((Productos)tblProductos.getSelectionModel().getSelectedItem()).getCodigoProveedor()));
     }
     
-    public TipoProducto buscarTipoProducto (int codTipoProducto ){
+    public TipoProducto buscarTipoProducto (int codigoTipoProducto){
         TipoProducto result = null;
         try{
             PreparedStatement procedimiento = Conexion.getInstance().getConexion().prepareCall("{call sp_BuscarTipoProducto(?)}");
-            procedimiento.setInt(1, codTipoProducto);
+            procedimiento.setInt(1, codigoTipoProducto);
             ResultSet registro = procedimiento.executeQuery();
             while (registro.next()){
                 result = new TipoProducto(registro.getInt("codigoTipoProducto"),
@@ -123,11 +123,11 @@ public class MenuProductosController implements Initializable{
         return result;
     }
     
-    public Proveedores buscarProveedores (int codProveedor ){
+    public Proveedores buscarProveedores (int codigoProveedor ){
         Proveedores result = null;
         try{
             PreparedStatement procedimiento = Conexion.getInstance().getConexion().prepareCall("{call sp_BuscarProveedor(?)}");
-            procedimiento.setInt(1, codProveedor);
+            procedimiento.setInt(1, codigoProveedor);
             ResultSet registro = procedimiento.executeQuery();
             while (registro.next()){
                 result = new Proveedores(registro.getInt("codigoProveedor"),
@@ -313,6 +313,9 @@ public class MenuProductosController implements Initializable{
         txtPrecioM.clear();
         txtImagenProducto.clear();
         txtExistencia.clear();
+        tblProductos.getSelectionModel().getSelectedItem();
+        cmbCodigoTipoProducto.getSelectionModel().getSelectedItem();
+        cmbCodigoProveedor.getSelectionModel().getSelectedItem();
     }
     
     public void setEscenarioPrincipal(Main escenarioPrincipal){

@@ -107,18 +107,18 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="EmailProveedor" GridPane.rowIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion" GridPane.rowIndex="2" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo Proveedor" GridPane.columnIndex="2" />
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ComboBox prefHeight="25.0" prefWidth="120.0" GridPane.columnIndex="3" />
+            <TextField fx:id="txtCodigoEP" GridPane.columnIndex="1" />
+            <TextField fx:id="txtEmailProveedor" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtDescripcion" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbCodigoProveedor" prefHeight="25.0" prefWidth="120.0" GridPane.columnIndex="3" />
          </children>
       </GridPane>
-      <TableView layoutX="218.0" layoutY="158.0" prefHeight="243.0" prefWidth="492.0">
+      <TableView fx:id="tblEmailProveedor" layoutX="218.0" layoutY="158.0" onMouseClicked="#seleccionarElementos" prefHeight="243.0" prefWidth="492.0">
          <columns>
-            <TableColumn prefWidth="138.0" text="codigoEmailProveedor" />
-            <TableColumn prefWidth="117.0" text="emailProveedor" />
-            <TableColumn prefWidth="117.0" text="descripcion" />
-            <TableColumn prefWidth="119.0" text="codigoProveedor" />
+            <TableColumn fx:id="colCodigoEP" prefWidth="138.0" text="codigoEmailProveedor" />
+            <TableColumn fx:id="colEmailProveedor" prefWidth="117.0" text="emailProveedor" />
+            <TableColumn fx:id="colDescripcion" prefWidth="117.0" text="descripcion" />
+            <TableColumn fx:id="colCodigoProveedor" prefWidth="119.0" text="codigoProveedor" />
          </columns>
       </TableView>
    </children>

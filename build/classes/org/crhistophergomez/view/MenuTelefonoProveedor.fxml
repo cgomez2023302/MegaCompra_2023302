@@ -54,12 +54,12 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numero Principal" GridPane.rowIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numero Secundario" GridPane.rowIndex="2" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Observaciones" GridPane.columnIndex="2" />
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtCodigoTP" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNumeroP" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNumeroS" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo Proveedor" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="3" />
+            <ComboBox fx:id="cmbCodigoProveedor" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txtObservaciones" GridPane.columnIndex="3" />
          </children>
       </GridPane>
       <GridPane layoutX="114.0" layoutY="161.0" prefHeight="243.0" prefWidth="83.0">
@@ -115,13 +115,13 @@
             <Image url="@../images/Registros.png" />
          </image>
       </ImageView>
-      <TableView layoutX="218.0" layoutY="158.0" prefHeight="243.0" prefWidth="492.0">
+      <TableView fx:id="tblTelefonoProveedor" layoutX="218.0" layoutY="158.0" onMouseClicked="#seleccionarElementos" prefHeight="243.0" prefWidth="492.0">
          <columns>
-            <TableColumn prefWidth="125.0" text="codigoTelefonoProveedor" />
-            <TableColumn prefWidth="82.0" text="numeroPrincipal" />
-            <TableColumn prefWidth="95.0" text="numeroSecundario" />
-            <TableColumn prefWidth="86.0" text="observaciones" />
-            <TableColumn prefWidth="103.0" text="codigoProveedor" />
+            <TableColumn fx:id="colCodigoTP" prefWidth="125.0" text="codigoTelefonoProveedor" />
+            <TableColumn fx:id="colNumeroP" prefWidth="82.0" text="numeroPrincipal" />
+            <TableColumn fx:id="colNumeroS" prefWidth="95.0" text="numeroSecundario" />
+            <TableColumn fx:id="colObservaciones" prefWidth="86.0" text="observaciones" />
+            <TableColumn fx:id="colCodigoProveedor" prefWidth="103.0" text="codigoProveedor" />
          </columns>
       </TableView>
    </children>
