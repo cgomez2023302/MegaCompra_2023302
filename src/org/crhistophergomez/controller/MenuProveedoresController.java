@@ -4,6 +4,8 @@ import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,6 +23,7 @@ import javafx.scene.image.ImageView;
 import javax.swing.JOptionPane;
 import org.crhistophergomez.bean.Proveedores;
 import org.crhistophergomez.db.Conexion;
+import org.crhistophergomez.reportes.GenerarReportes;
 import org.crhistophergomez.system.Main;
 
 
@@ -289,6 +292,12 @@ public class MenuProveedoresController implements Initializable{
                 tipoDeOperaciones = operaciones.NINGUNO;
                 
         }
+    }
+    
+    public void imprimirReporte(){
+        Map parametros = new HashMap();
+        parametros.put("codigoProveedor", null);
+        GenerarReportes.mostrarReportes("ReportesProveedores.jasper", "Reporte de los Proveedores", parametros);
     }
     
     public void desactivarControles(){
