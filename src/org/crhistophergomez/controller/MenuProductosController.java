@@ -240,18 +240,18 @@ public class MenuProductosController implements Initializable{
     }
     
     public void guardar (){
-         Productos registro = new Productos();
-         registro.setCodigoProducto(Integer.parseInt(txtCodigoProducto.getText()));
-         registro.setDescripcion(txtDescripcion.getText());
-         registro.setPrecioDocena(Double.parseDouble(txtPrecioD.getText()));
-         registro.setPrecioUnitario(Double.parseDouble(txtPrecioU.getText()));
-         registro.setPrecioMayor(Double.parseDouble(txtPrecioM.getText()));
-         registro.setImagenProducto(txtImagenProducto.getText());
-         registro.setExistencia(Integer.parseInt(txtExistencia.getText()));
-         registro.setCodigoTipoProducto(((TipoProducto)cmbCodigoTipoProducto.getSelectionModel().getSelectedItem()).getCodigoTipoProducto());
-         registro.setCodigoProveedor(((Proveedores)cmbCodigoProveedor.getSelectionModel().getSelectedItem()).getCodigoProveedor());
+        Productos registro = new Productos();
+        registro.setCodigoProducto(Integer.parseInt(txtCodigoProducto.getText()));
+        registro.setDescripcion(txtDescripcion.getText());
+        registro.setPrecioDocena(Double.parseDouble(txtPrecioD.getText()));
+        registro.setPrecioUnitario(Double.parseDouble(txtPrecioU.getText()));
+        registro.setPrecioMayor(Double.parseDouble(txtPrecioM.getText()));
+        registro.setImagenProducto(txtImagenProducto.getText());
+        registro.setExistencia(Integer.parseInt(txtExistencia.getText()));
+        registro.setCodigoTipoProducto(((TipoProducto)cmbCodigoTipoProducto.getSelectionModel().getSelectedItem()).getCodigoTipoProducto());
+        registro.setCodigoProveedor(((Proveedores)cmbCodigoProveedor.getSelectionModel().getSelectedItem()).getCodigoProveedor());
          
-         try {
+        try {
             PreparedStatement procedimiento = Conexion.getInstance().getConexion().prepareCall("{call sp_agregarProducto(?, ?, ?, ?, ?, ?, ?, ?, ?)}");
                 procedimiento.setInt(1, registro.getCodigoProducto());
                 procedimiento.setString(2, registro.getDescripcion());
@@ -264,10 +264,10 @@ public class MenuProductosController implements Initializable{
                 procedimiento.setInt(9, registro.getCodigoTipoProducto());
                 procedimiento.execute();
             listaProductos.add(registro);
-         }catch (Exception e){
-             e.printStackTrace();
-         }
-     }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
     
     public void eliminar(){
         

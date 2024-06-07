@@ -28,6 +28,7 @@ import org.crhistophergomez.controller.ProgramadorController;
  *
  * @author informatica
  */
+
 public class Main extends Application {
     private Stage escenarioPrincipal;
     private Scene escena;

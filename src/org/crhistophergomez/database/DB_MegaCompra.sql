@@ -1087,4 +1087,8 @@ delimiter ;
 call sp_editarDetalleFactura(1, 25.02, 12, 1, 2);
 call sp_listarDetalleFactura();
 
+-- Trigger 1
+
+
+
 set global time_zone = '-6:00'
